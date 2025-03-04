@@ -20,7 +20,7 @@ pub struct Binary {
 pub struct ServerName(pub String);
 
 pub async fn download(server_name: ServerName) -> Result<Binary, ServerError> {
-    // Jus to shift different ticks in time
+    // Want to shift different downlad ticks in time
     let sleep_duration = rand::thread_rng().gen_range(10..=300);
     time::sleep(time::Duration::from_millis(sleep_duration)).await;
 
